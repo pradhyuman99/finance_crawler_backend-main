@@ -8,5 +8,5 @@ COPY ./package-lock.json ./
 RUN npm install
 COPY . .
 
-EXPOSE 4444
+EXPOSE 8000
 CMD ["npm", "start"]
