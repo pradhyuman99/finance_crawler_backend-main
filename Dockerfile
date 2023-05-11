@@ -1,14 +1,12 @@
-# Pulling base image
-FROM node:16.15.0-slim
+FROM node:17-alpine
 
-WORKDIR /
+WORKDIR /usr/src/app
 
-# copy files from docker client's current directory
-COPY . .
+COPY ./package.json ./
+COPY ./package-lock.json ./
 
 RUN npm install
+COPY . .
 
-EXPOSE 8000
-
-# running below command on port 8000 within the container
+EXPOSE 4444
 CMD ["npm", "start"]
