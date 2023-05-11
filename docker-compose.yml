@@ -1,0 +1,20 @@
+version: "3"
+services:
+  react-app:
+    image: react-app
+    stdin_open: true  # so that container is alive and listening for request after startup
+    ports:
+      - "3000:3000"
+    networks:
+      - mern-app
+
+  server:
+    image: server
+    ports:
+      - "8000:8000" 
+    networks:
+      - mern-app
+
+networks:
+  mern-app:
+    driver: bridge
