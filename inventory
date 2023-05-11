@@ -1,2 +1,2 @@
-[yaman]
-192.168.29.75 ansible_user=ansible_usr
+[localServer]
+mini_project_server ansible_host=172.16.138.212 ansible_connection=ssh ansible_ssh_user=ansible_usr ansible_ssh_pass=123 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
