@@ -51,7 +51,7 @@ app.use(Sentry.Handlers.tracingHandler());
 // -------------------------------------------------
 
 // //setting up cors
-app.use(cors());
+// app.use(cors());
 
 
 //users routes
