@@ -1,20 +1,29 @@
 version: "3"
 services:
   react-app:
-    image: react-app
-    stdin_open: true  # so that container is alive and listening for request after startup
+    image: yamangoyal209/financial_crawler_frontend:latest
+    stdin_open: true
     ports:
       - "3000:3000"
     networks:
       - mern-app
-
-  server:
-    image: server
+  api-server:
+    image: yamangoyal/financial_crawler_backend:latest
     ports:
-      - "8000:8000" 
+      - "4444:4444"
     networks:
       - mern-app
-
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:3.6.23-xenial
+    networks:
+      - mern-app
+    volumes:
+      - mongo-data:/data/db
 networks:
   mern-app:
     driver: bridge
+volumes:
+  mongo-data:
+    driver: local
