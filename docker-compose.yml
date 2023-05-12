@@ -15,7 +15,7 @@ services:
     #   PORT: 4444
     image: yamangoyal209/financial_crawler_backend:latest
     ports:
-      - "4444:4444"
+      - "8000:8000"
     networks:
       - mern-app
     depends_on:
