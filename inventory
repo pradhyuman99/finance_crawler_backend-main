@@ -1,2 +1,2 @@
-[yaman]
-major_project_server ansible_host=192.168.29.75 ansible_connection=ssh ansible_ssh_user=ansible_usr ansible_ssh_pass=123 ansible_sudo_pass=123 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+[joshi]
+major_project_server ansible_host=192.168.84.195 ansible_connection=ssh ansible_ssh_user=joshi ansible_ssh_pass=Jjoshi18! ansible_sudo_pass=Jjoshi18! ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
