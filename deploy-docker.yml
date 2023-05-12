@@ -7,11 +7,11 @@
         src: docker-compose.yml
         dest: ./
     
-    -name: docker compose down
-     shell: docker-compose down
+    - name: docker compose down
+      shell: docker-compose down
     
-    -name: deleting previous images
-     shell: docker rmi --force $(docker images | grep "<none>" | awk '{print $3}')
+    - name: deleting previous images
+      shell: docker rmi --force $(docker images | grep "<none>" | awk '{print $3}')
     # - name: pull images specifed in docker-compose
     #   command: docker-compose -f ./docker-compose.yml pull
     - name: run the pulled docker images in detached mode
