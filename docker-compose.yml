@@ -12,6 +12,7 @@ services:
       MONGO_DB: mongodb+srv://root:BNc8sH5I6wdcRWLG@cluster0.fsimx8u.mongodb.net/?retryWrites=true&w=majority
       JWT_KEY: yamanjwtkey
       NODE_ENV: production
+      PORT: 4444
 
     image: yamangoyal209/financial_crawler_backend:latest
     ports:
