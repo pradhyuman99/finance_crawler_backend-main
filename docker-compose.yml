@@ -8,6 +8,11 @@ services:
     networks:
       - mern-app
   api-server:
+    environment:
+      MONGO_DB: mongodb+srv://root:BNc8sH5I6wdcRWLG@cluster0.fsimx8u.mongodb.net/?retryWrites=true&w=majority
+      JWT_KEY: yamanjwtkey
+      NODE_ENV: production
+
     image: yamangoyal209/financial_crawler_backend:latest
     ports:
       - "4444:4444"
