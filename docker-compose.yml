@@ -10,7 +10,7 @@ services:
   api-server:
     image: yamangoyal209/financial_crawler_backend:latest
     ports:
-      - "8000:8000"
+      - "4444:4444"
     networks:
       - mern-app
     depends_on:
