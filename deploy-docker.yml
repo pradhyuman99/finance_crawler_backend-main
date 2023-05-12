@@ -7,8 +7,8 @@
         src: docker-compose.yml
         dest: ./
     
-    - name: docker compose down
-      shell: docker-compose down
+#     - name: docker compose down
+#       shell: docker-compose down
     
     - name: deleting previous images
       shell: docker rmi --force $(docker images | grep "<none>" | awk '{print $3}')
